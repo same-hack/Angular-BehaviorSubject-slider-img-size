@@ -1,0 +1,18 @@
+<p>slider works!</p>
+
+<!-- テキスト -->
+<p>
+  <span id="txt">{{ service.slider.value }}</span
+  >px
+</p>
+
+<!-- スライダー -->
+<input
+  type="range"
+  id="slider"
+  min="10"
+  max="500"
+  value="service.slider.value"
+  [(ngModel)]="service.slider.value"
+  (ngModelChange)="service.update(service.slider.value)"
+/>
